@@ -28,8 +28,6 @@ import VendorSubs from "./components/VendorSubs/VendorSubs.jsx";
 export default function App() {
     const [user, setUser] = useRecoilState(userAtom);
     const navigate = useNavigate();
-
-
     return (
             <CssVarsProvider disableTransitionOnChange theme={customTheme}>
                 <GlobalStyles
@@ -57,9 +55,9 @@ export default function App() {
 }
 
 function VendorScreen() {
-
     const [user, setUser] = useRecoilState(userAtom);
     const navigate = useNavigate();
+    
     useEffect(() => {
         async function fetchData() {
             if (setToken())
